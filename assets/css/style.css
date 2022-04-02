@@ -5,8 +5,72 @@
   }
 }
 
-#carousel-text {
-  z-index: 20;
+@keyframes fadein-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#carousel-animation {
+  animation-duration: 1.5s;
+  animation-name: fadein-down;
+}
+
+.carousel-item {
+  transition: transform 5s ease-in-out;
+  transition-delay: 2s;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 5s;
+}
+
+.carousel-caption {
+  animation-duration: 2s;
+  animation-name:fadein;
+}
+
+#title-animation {
+  animation-duration: 1.5s;
+  animation-name: fadein-down;
+}
+
+#nav-animation {
+  animation-duration: 1.5s;
+  animation-name: fadein-down;
+}
+
+.dropdown {
+  animation-duration: 1.5s;
+  animation-name: fadein-down;
+}
+
+.dropdown-item {
+  animation-duration: 1.5s;
+  animation-name: fadein;
+}
+
+#footer-animation {
+  animation-duration: 2s;
+  animation-name: fadein;
+}
+
 
 /*# sourceMappingURL=style.css.map */
