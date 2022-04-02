@@ -34,7 +34,7 @@
 
 .carousel-item {
   transition: transform 5s ease-in-out;
-  transition-delay: 2s;
+  transition-delay: 5s;
 }
 
 .carousel-fade .active.carousel-item-start,
