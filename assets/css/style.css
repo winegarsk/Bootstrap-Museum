@@ -2,25 +2,38 @@
 
 
 /**QUERIES**/
-@media only screen {
-  .container-about .img-fluid {
-    display: none;
-  }
-}
 
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .h-sm-100 {
       height: 100%;
   }
 
-}
-
-@media (max-width:480px) {
-  .container-about .img-fluid {
-    display: none;
+  #about .col-md .img {
+    display: none !important;
   }
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
 
 }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+
+}
+
 
 /**KEYFRAMES**/
 @keyframes fadein-down {
@@ -110,14 +123,23 @@ h1, h2, h3, h4, h5 {
 
 
 /**TITLE & NAV BAR**/
+.title {
+  padding-left: 2em;
+}
+
 #title-animation {
   animation-duration: 2s;
   animation-name: fadein-down;
+  padding-left: 2em;
 }
 
 #nav-animation {
   animation-duration: 2s;
   animation-name: fadein-down;
+}
+
+#menu {
+  padding-left: 2em;
 }
 
 .dropdown {
@@ -146,7 +168,11 @@ h1, h2, h3, h4, h5 {
 
 .carousel-item img {
   filter: brightness(75%);
-  height: 1200px;
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  width: 100%;
+  max-height: 800px;
+  margin-bottom: 1rem;
 }
 
 .carousel-fade .active.carousel-item-start,
@@ -205,8 +231,6 @@ h1, h2, h3, h4, h5 {
 #about .img-fluid {
   animation: slidein;
   animation-duration: 1.75s;
-  width:
-  object-fit: cover;
 }
 
 #about .col-md {
@@ -253,28 +277,24 @@ h1, h2, h3, h4, h5 {
   display: block;
   width: 75%;
 }
-.card-text {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width:max-content;
-}
-
-.card-links {
-  position: relative;
-  display: block;
-}
 
 .card-title {
+  padding-top: 1em;
+}
+
+.card-caption {
   position: relative;
-  display: block;
-  left: .5rem;
+  top: 3em;
+
+}
+
+
+.card-caption .h5 {
+  position: absolute;
 }
 
 .card .img-fluid {
   border: none !important;
-  filter: brightness(75%);
-
 }
 
 .card .card-img-top {
@@ -282,11 +302,16 @@ h1, h2, h3, h4, h5 {
 }
 
 /**CONTACT**/
-#contact-map {
-  display: block;
-  width: 75%;
+#mapbox {
+  position: relative;
+  bottom: 3em;
+  left: 4em;
 }
 
+#contact-map .col-md {
+  position: relative;
+  right: 4em;
+}
 
 /**FOOTER**/
 #footer-animation {
@@ -294,9 +319,13 @@ h1, h2, h3, h4, h5 {
   animation-name: fadein;
 }
 
-.footer::before{
-  opacity:25%;
+.footer-container .bi {
+  position: relative;
+  left: 100px;
+  top: .5em;
 }
+
+
 
 
 /*# sourceMappingURL=style.css.map */
