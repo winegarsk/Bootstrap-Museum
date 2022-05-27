@@ -111,6 +111,19 @@
   to { width: 100% }
 }
 
+/**ANIMATIONS and TRANSITIONS**/
+#fadein {
+  opacity: 0;
+  transition: opacity 250ms ease-in
+}
+
+#fadein.appear {
+  opacity: 1;
+}
+
+
+/**PAGE TWEAK**/
+
 .row {
   margin: none !important;
   padding: none !important;
@@ -288,7 +301,6 @@ h1, h2, h3, h4, h5 {
 
 }
 
-
 .card-caption .h5 {
   position: absolute;
 }
@@ -302,7 +314,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /**CONTACT**/
-#mapbox {
+.mapbox {
   position: relative;
   bottom: 3em;
   left: 4em;
